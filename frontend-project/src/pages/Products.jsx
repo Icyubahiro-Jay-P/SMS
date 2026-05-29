@@ -187,7 +187,7 @@ const Products = () => {
                   <p className="font-medium">
                     Stock: {product.quantityInStock} units
                   </p>
-                  <p>Price: ${product.unitPrice.toFixed(2)}</p>
+                  <p>Price: {product.unitPrice} Frw</p>
                   <p>Supplier: {product.supplierName}</p>
                 </div>
                 <div
