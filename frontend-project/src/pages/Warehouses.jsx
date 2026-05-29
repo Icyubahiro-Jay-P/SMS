@@ -129,7 +129,6 @@ const Warehouses = () => {
                 className="bg-white rounded-lg shadow p-4 hover:shadow-lg transition"
               >
                 <div className="flex items-start">
-                  <div className="text-2xl mr-3">🏢</div>
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold text-gray-800">
                       {warehouse.warehouseName}
@@ -138,7 +137,7 @@ const Warehouses = () => {
                       Code: {warehouse.warehouseCode}
                     </p>
                     <p className="text-sm text-gray-600">
-                      📍 {warehouse.warehouseLocation}
+                      {warehouse.warehouseLocation}
                     </p>
                     <p className="text-xs text-gray-500 mt-2">
                       Created:{" "}

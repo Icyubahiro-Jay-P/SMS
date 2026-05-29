@@ -7,7 +7,6 @@ const userSchema = new mongoose.Schema({
     required: true,
     unique: true,
     trim: true,
-    minlength: 3,
   },
   email: {
     type: String,
@@ -22,7 +21,6 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true,
-    minlength: 6,
     select: false,
   },
   role: {
@@ -34,20 +32,7 @@ const userSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-});
+}, {timestamps: true});
 
-// Hash password before saving
-userSchema.pre("save", async function (next) {
-  if (!this.isModified("password")) return next();
-
-  const salt = await bcryptjs.genSalt(10);
-  this.password = await bcryptjs.hash(this.password, salt);
-  next();
-});
-
-// Method to compare passwords
-userSchema.methods.matchPassword = async function (enteredPassword) {
-  return await bcryptjs.compare(enteredPassword, this.password);
-};
 
 module.exports = mongoose.model("User", userSchema);

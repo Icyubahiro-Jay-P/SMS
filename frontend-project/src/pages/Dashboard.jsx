@@ -21,7 +21,6 @@ const Dashboard = () => {
             to="/products"
             className="bg-white rounded-lg shadow p-6 hover:shadow-lg transition"
           >
-            <div className="text-3xl mb-2">📦</div>
             <h2 className="text-xl font-semibold text-gray-800">Products</h2>
             <p className="text-gray-600 text-sm">Manage all products</p>
           </Link>
@@ -30,7 +29,6 @@ const Dashboard = () => {
             to="/warehouses"
             className="bg-white rounded-lg shadow p-6 hover:shadow-lg transition"
           >
-            <div className="text-3xl mb-2">🏢</div>
             <h2 className="text-xl font-semibold text-gray-800">Warehouses</h2>
             <p className="text-gray-600 text-sm">Manage warehouses</p>
           </Link>
@@ -39,7 +37,6 @@ const Dashboard = () => {
             to="/transactions"
             className="bg-white rounded-lg shadow p-6 hover:shadow-lg transition"
           >
-            <div className="text-3xl mb-2">🔄</div>
             <h2 className="text-xl font-semibold text-gray-800">
               Transactions
             </h2>
@@ -50,7 +47,6 @@ const Dashboard = () => {
             to="/reports"
             className="bg-white rounded-lg shadow p-6 hover:shadow-lg transition"
           >
-            <div className="text-3xl mb-2">📊</div>
             <h2 className="text-xl font-semibold text-gray-800">Reports</h2>
             <p className="text-gray-600 text-sm">Generate reports</p>
           </Link>
@@ -62,9 +58,9 @@ const Dashboard = () => {
               Quick Stats
             </h3>
             <div className="space-y-2 text-sm text-gray-600">
-              <p>📈 System Status: Active</p>
-              <p>🔐 Role: {user?.role || "Staff"}</p>
-              <p>✅ Database: Connected</p>
+              <p>System Status: Active</p>
+              <p>Role: {user?.role || "Staff"}</p>
+              <p>Database: Connected</p>
             </div>
           </div>
 
